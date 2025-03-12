@@ -1,0 +1,447 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  body {
+    background-color: #f8f8f8;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 40px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .country-selector {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .country-selector img {
+    width: 24px;
+    margin-right: 8px;
+  }
+  
+  .country-selector select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-btn {
+    background-color: #00c100;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #008a00;
+  }
+  
+  /* Sección Hero */
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    height: 85vh; /* Ocupar toda la altura de la pantalla */
+    object-fit: fill; /* Ajusta la imagen para cubrir toda la pantalla */
+    z-index: -1;
+  }
+  
+  .hero-text {
+    max-width: 40%;
+    margin-left: 5%;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Contenedor de la sección */
+  .section-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Títulos y textos */
+  h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  h3{
+    font-size: 22px;
+    position: relative; /* Para poder moverlos con left */
+    left: -150px; /* Ajusta este valor según sea necesario */
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    top: -30px;
+  }
+  
+  h4 {
+    font-size: 22px;
+    position: relative; /* Para poder moverlo con left */
+    left: -150px; /* Ajusta este valor según sea necesario */
+    text-align: left;
+    margin-top: 30px; /* Aumenta el espacio arriba */
+    margin-bottom: 20px; /* Espacio debajo */
+    padding-bottom: 10px; /* Espaciado interno extra */
+    top: 10px;
+  }
+  
+  
+  h5 {
+    font-size: 22px;
+    position: relative; /* Permite moverlo con top */
+    left: 250px; /* Ajusta este valor según sea necesario */
+    text-align: left;
+    top: 20px; /* Mueve el h5 más abajo */
+    margin-top: 30px; /* Espacio arriba */
+    margin-bottom: 40px; /* Más espacio abajo */
+    padding-bottom: 10px; /* Espaciado interno extra */
+  }
+  
+  .text-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: #222; /* Negro más suave para mejor lectura */
+    line-height: 1.6;
+    text-align: left;
+    max-width: 700px; /* Ajusta el ancho del texto */
+    position: relative; /* Necesario para que 'left' funcione */
+    left: -150px; /* Mueve el texto a la izquierda */
+    max-width: 1100px; /* Expande el ancho del texto */
+    width: 115%; /* Asegura que el texto se expanda dentro del contenedor */
+    margin-top: -30px; /* Mueve el texto hacia arriba */
+  }
+  
+  .text-content strong {
+    font-weight: 700;
+    color: #000; /* Negro fuerte para destacar */
+  }
+  
+  .text-container {
+    text-align: left;
+    max-width: 800px; /* Ajusta según sea necesario */
+    margin-left: -150px; /* Desplaza el texto hacia la izquierda */
+    padding-left: 20px; /* Ajusta si es necesario */
+  }
+  
+  .text-container h3 {
+    text-align: left;
+    margin-left: 0;
+    position: relative;
+  }
+  
+  strong {
+    color: #d9534f;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de la cuadrícula */
+  .comidas-grid,
+  .comida-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 70px; /* Espaciado uniforme */
+    justify-content: center; /* Centrar la cuadrícula */
+    align-items: center;
+    max-width: 1200px; /* Ajuste del ancho */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    padding: 20px;
+  }
+  
+  /* Tarjeta de cada comida */
+  .comida-card {
+    background: #fff;
+    border-radius: 15px;
+    border: 2px solid #000;
+    text-align: center;
+    padding: 15px;
+    width: 180px; /* Más grande */
+    height: 230px; /* Ajuste de altura */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .comida-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Imagen dentro de la tarjeta */
+  .comida-card img {
+    width: 100%;
+    height: 140px; /* Más grande */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Estilos del texto */
+  .comida-card span {
+    display: block;
+    font-weight: bold;
+    color: #444;
+    font-size: 15px;
+    background: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 12px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  /*SEGUNDO TITULO*/
+  /* Estilos generales de la cuadrícula */
+  .comidas-grid-destacadas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 70px; /* Espaciado uniforme */
+    justify-content: center; /* Centrar la cuadrícula */
+    align-items: center;
+    max-width: 1200px; /* Ajuste del ancho */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    padding: 20px;
+  }
+  
+  /* Estilos para cada tarjeta de comida destacada */
+  .comidasDestacadas {
+    background: #fff;
+    border-radius: 15px;
+    border: 2px solid #000;
+    text-align: center;
+    padding: 15px;
+    width: 180px; /* Más grande */
+    height: 230px; /* Ajuste de altura */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  /* Efecto hover */
+  .comidasDestacadas:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilo para las imágenes */
+  .comidasDestacadas img {
+    width: 100%;
+    height: 140px; /* Más grande */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Texto debajo de la imagen correctamente alineado */
+  .comidasDestacadas span {
+    display: block;
+    font-weight: bold;
+    color: #444;
+    font-size: 15px;
+    background: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 12px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  
+  
+  /* ----------------------- */
+  /* 🔻 ESTILOS GENERALES 🔻 */
+  /* ----------------------- */
+  /* Estilos generales del footer */
+  .footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+  /* Sección de cada bloque del footer */
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  
+  /* Títulos de las secciones */
+  .footer-section h6 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0a500;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Texto de las secciones */
+  .footer-text {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.8;
+    line-height: 1.5;
+    max-width: 300px;
+  }
+  
+  /* Enlaces */
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: #f0a500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff;
+  }
+  
+  /* Iconos de redes sociales */
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* Footer inferior */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .hero-text {
+      max-width: 90%;
+      text-align: center;
+      margin-left: 5%;
+    }
+  
+    .hero-text h2 {
+      font-size: 28px;
+    }
+  
+    .hero-text p {
+      font-size: 16px;
+    }
+    .comidas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    /*Pie de Pagina*/
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
